@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import logo from "../Assets/logo.png"
-import Badge from "@mui/material/Badge";
+
+import { NavLink } from 'react-router-dom';
 
 
 function Navbar() {
@@ -16,15 +17,16 @@ function Navbar() {
      </div>
      {/* <div className=''> */}
       <ul className='flex  mx-2 mt-10 '>
-        <li className='mx-4 font-semibold hover:cursor-pointer' onClick={()=>{setmenu("Shop")} }>Shop{menu==="Shop"?<hr  className=' bg-red-600 font-bold h-0.5'/>:<></>}</li>
-        <li className='mx-4 font-semibold hover:cursor-pointer' onClick={()=>{setmenu("Men")}}>Men{menu==="Men"?<hr className='bg-red-600 font-bold h-0.5'/>:<></>}</li>
-        <li className='mx-4 font-semibold hover:cursor-pointer' onClick={()=>{setmenu("Women")}}>Women{menu==="Women"?<hr className='bg-red-600 font-bold h-0.5'/>:<></>}</li>
-        <li className='mx-4 font-semibold hover:cursor-pointer' onClick={()=>{setmenu("Kids")}}>Kids{menu==="Kids"?<hr className='bg-red-600 font-bold h-0.5'/>:<></>}</li>
+        <li className='mx-4 font-semibold hover:cursor-pointer' onClick={()=>{setmenu("Shop")} }><NavLink to="/" style={{textDecoration:"none"}}>Shop</NavLink>{menu==="Shop"?<hr  className=' bg-red-600 font-bold h-0.5'/>:<></>}</li>
+        <li className='mx-4 font-semibold hover:cursor-pointer' onClick={()=>{setmenu("Men")}}><NavLink to="/mens" style={{textDecoration:"none"}}>Men</NavLink>{menu==="Men"?<hr className='bg-red-600 font-bold h-0.5'/>:<></>}</li>
+        <li className='mx-4 font-semibold hover:cursor-pointer' onClick={()=>{setmenu("Women")}}><NavLink to="/womens"   style={{textDecoration:"none"}}>Womens</NavLink>{menu==="Women"?<hr className='bg-red-600 font-bold h-0.5'/>:<></>}</li>
+        <li className='mx-4 font-semibold hover:cursor-pointer' onClick={()=>{setmenu("Kids")}}> <NavLink to="/kids" style={{textDecoration:"none"}}>Kids</NavLink>{menu==="Kids"?<hr className='bg-red-600 font-bold h-0.5'/>:<></>}</li>
       </ul>
      {/* </div> */}
+
      <div className='cart  mt-4 mx-6'>
-      <button className='mx-4 bg-gray-300 rounded-full p-2 '>Login</button>
-      <button className='mx-4 bg-gray-300 rounded-full p-2 '>Login</button>
+      <button className='mx-4 bg-gray-300 rounded-full p-2 '> <NavLink to="/login" style={{textDecoration:"none"}}>Login</NavLink> </button>
+      {/* <button className='mx-4 bg-gray-300 rounded-full p-2 '>Login</button> */}
       {/* <div className=''>
       <Badge  color="primary">
          

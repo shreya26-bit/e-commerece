@@ -16,7 +16,7 @@ function Offers() {
          
           <div className="">
             <div className="flex">
-              <p className="text-[70px] font-semibold">Exclusive</p>
+              <p className="text-[63px] font-semibold">Exclusive</p>
               {/* <img
                 src={hand_icon}
                 style={{ width: "100px", height: "100px" }}
